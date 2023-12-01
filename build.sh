@@ -2,7 +2,9 @@
 
 set -euo pipefail
 
-CONSOLE_PLUGIN_IMAGE=${CONSOLE_PLUGIN_IMAGE:="quay.io/openshift-pipeline/console-plugin:latest"}
+CONSOLE_PLUGIN_IMAGE_REPO=${CONSOLE_PLUGIN_IMAGE_REPO:="quay.io/openshift-pipeline/console-plugin"}
+CONSOLE_PLUGIN_IMAGE_TAG=${CONSOLE_PLUGIN_IMAGE_TAG:="latest"}
+CONSOLE_PLUGIN_IMAGE=${CONSOLE_PLUGIN_IMAGE_REPO}:${CONSOLE_PLUGIN_IMAGE_TAG}
 
 echo "Building the Console Plugin Image ..."
 
